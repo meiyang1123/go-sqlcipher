@@ -8,6 +8,10 @@
 package sqlite3
 
 /*
+#cgo CFLAGS: -I ${SRCDIR}/win
+#cgo amd64 LDFLAGS: -L${SRCDIR}/win/lib -lcrypto -lws2_32 -lgdi32 -lz
+#cgo LDFLAGS: -static -Wl,--allow-multiple-definition
+
 #cgo CFLAGS: -I.
 #cgo CFLAGS: -fno-stack-check
 #cgo CFLAGS: -fno-stack-protector
